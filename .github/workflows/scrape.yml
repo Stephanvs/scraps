@@ -8,8 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: install tq
-        run: pip3 install https://github.com/plainas/tq/zipball/stable
+      - uses: actions/setup-python@v1
+      - uses: BSFishy/pip-action@v1
+        with:
+          packages: |
+            https://github.com/plainas/tq/zipball/stable
+      # - name: install tq
+      #   run: pip3 install https://github.com/plainas/tq/zipball/stable
       - name: scrape
         run: megekko.sh
         env:
