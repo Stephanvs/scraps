@@ -13,8 +13,8 @@ jobs:
       - name: scrape
         run: megekko.sh
         env:
-          - ORDER_ID: ${{ secrets.ORDER_ID }}
-          - POSTCODE: ${{ secrets.POSTCODE }}
+          ORDER_ID: ${{ secrets.ORDER_ID }}
+          POSTCODE: ${{ secrets.POSTCODE }}
       - name: commit results
         uses: mikael/publish-to-github-action@master
         env:
