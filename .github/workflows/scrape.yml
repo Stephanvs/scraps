@@ -16,6 +16,6 @@ jobs:
           ORDER_ID: ${{ secrets.ORDER_ID }}
           POSTCODE: ${{ secrets.POSTCODE }}
       - name: commit results
-        uses: mikael/publish-to-github-action@master
+        uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
