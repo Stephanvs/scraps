@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: install tq
-        run: sudo pip3 install https://github.com/plainas/tq/zipball/stable
+        run: pip3 install https://github.com/plainas/tq/zipball/stable
       - name: scrape
         run: megekko.sh
         env:
