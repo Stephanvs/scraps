@@ -1,4 +1,7 @@
+#!/bin/bash
+
 TIMESTAMP=$(date +"%Y-%m-%dT%H:%M:%SZ")
+echo $TIMESTAMP
 
 curl -s 'https://www.megekko.nl/scripts/wachtrij/wachtrij.php' \
   -H 'authority: www.megekko.nl' \
