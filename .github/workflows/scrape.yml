@@ -17,12 +17,12 @@ jobs:
           sudo apt-get install python3-setuptools
           sudo -H pip3 install --upgrade pip
           sudo -H pip3 install https://github.com/plainas/tq/zipball/stable
-      - name: scrape
+      - name: Scrape
         run: ./megekko.sh
         env:
           ORDER_ID: ${{ secrets.ORDER_ID }}
           POSTCODE: ${{ secrets.POSTCODE }}
-      - name: commit results
+      - name: Commit results
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
